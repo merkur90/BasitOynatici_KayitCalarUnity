@@ -1,31 +1,26 @@
 name: Build Android
-
-on:
+on: 
   push:
     branches:
       - master
-
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-
+      - uses: actions/checkout@v4
       - name: Cache Library
-        uses: actions/cache@v3
+        uses: actions/cache@v4
         with:
           path: Library
           key: Library-${{ github.sha }}
           restore-keys: |
             Library-
-
       - name: Build Android
-        uses: game-ci/unity-builder@v3
+        uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
+          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
         with:
           targetPlatform: Android
           androidTargetSdkVersion: AndroidApi35
-          androidAppBundle: true
-
-
+          customParameters: -buildTarget Android -androidBuildSubtarget AppBundle
