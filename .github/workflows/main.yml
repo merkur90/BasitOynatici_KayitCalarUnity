@@ -1,0 +1,15 @@
+name: Unity Build
+
+on:
+  push:
+    branches: [ "master" ]
+
+jobs:
+  build:
+    name: Build for Android
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - uses: game-ci/unity-builder@v4
+        with:
+          targetPlatform: Android
