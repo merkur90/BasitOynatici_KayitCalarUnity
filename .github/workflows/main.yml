@@ -27,3 +27,5 @@ jobs:
           targetPlatform: Android
           androidTargetSdkVersion: AndroidApi35
           androidAppBundle: true
+
+
