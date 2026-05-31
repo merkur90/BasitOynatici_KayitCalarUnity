@@ -2,7 +2,7 @@ name: Unity Build
 
 on:
   push:
-    branches: [ "main" ] # Burayı "main" olarak değiştirdik
+    branches: [ "master" ] # Burayı "main" olarak değiştirdik
 
 jobs:
   build:
