@@ -32,6 +32,7 @@ jobs:
           targetPlatform: Android
           unityVersion: auto
           projectPath: .
+          # API 35 ve Gradle 8 uyumu için parametreler
           customParameters: >
             -buildTarget Android 
             -androidBuildSubtarget AppBundle 
@@ -39,4 +40,5 @@ jobs:
             -keystorePass ${{ secrets.KEYSTORE_PASS }} 
             -keyaliasName ${{ secrets.KEY_ALIAS }} 
             -keyaliasPass ${{ secrets.KEY_ALIAS_PASS }}
+            -androidTargetSdkVersion AndroidApiLevel35
             -androidSdkTarget 35
