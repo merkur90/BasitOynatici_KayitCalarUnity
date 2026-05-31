@@ -30,7 +30,7 @@ jobs:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
         with:
           targetPlatform: Android
-          unityVersion: 2018.4.36f
+          unityVersion: auto
           projectPath: .
           customParameters: >
             -buildTarget Android 
