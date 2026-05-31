@@ -22,5 +22,6 @@ jobs:
           UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
         with:
           targetPlatform: Android
+          projectPath: .
           androidTargetSdkVersion: AndroidApi35
           customParameters: -buildTarget Android -androidBuildSubtarget AppBundle
