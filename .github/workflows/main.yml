@@ -19,9 +19,9 @@ jobs:
         uses: game-ci/unity-builder@v4
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }}
-          
+          UNITY_SERIAL: ${{ secrets.UNITY_SERIAL }}
         with:
           targetPlatform: Android
-          projectPath: .
+          projectPath: BasitOynatici
           androidTargetSdkVersion: AndroidApi35
           customParameters: -buildTarget Android -androidBuildSubtarget AppBundle
