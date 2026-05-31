@@ -2,7 +2,7 @@ name: Unity Build
 
 on:
   push:
-    branches: [ "master" ]
+    branches: [ "main" ] # Burayı "main" olarak değiştirdik
 
 jobs:
   build:
@@ -13,3 +13,5 @@ jobs:
       - uses: game-ci/unity-builder@v4
         with:
           targetPlatform: Android
+        env:
+          UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }} # Bu satır çok önemli
