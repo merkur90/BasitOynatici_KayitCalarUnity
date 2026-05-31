@@ -13,6 +13,6 @@ jobs:
       - uses: game-ci/unity-builder@v4
         with:
           targetPlatform: Android
-          projectPath: . # Projeniz ana dizindeyse burayı nokta (.) yapın
+          projectPath:"BasitOynatici"
         env:
           UNITY_LICENSE: ${{ secrets.UNITY_LICENSE }} # Bu satır çok önemli
