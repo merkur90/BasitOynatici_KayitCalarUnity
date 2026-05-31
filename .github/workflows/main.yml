@@ -5,6 +5,7 @@ on:
     branches:
       - master
   workflow_dispatch:
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -23,10 +24,10 @@ jobs:
         uses: game-ci/unity-builder@v4
         env:
           UNITY_EMAIL: ${{ secrets.UNITY_EMAIL }}
-          
           UNITY_PASSWORD: ${{ secrets.UNITY_PASSWORD }}
         with:
           targetPlatform: Android
           projectPath: .
-          licenseStrategy: activation
+          # Lisanslama hatasýný engellemek için tüm yöntemleri kapsýyoruz
+          skipActivation: false
           customParameters: -buildTarget Android -androidBuildSubtarget AppBundle
