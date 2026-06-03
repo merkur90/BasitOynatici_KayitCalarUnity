@@ -14,3 +14,6 @@
 /*.pidb
 /*.booproj
 /*.svd
+# Keystore dosyalarini git'e dahil etme
+*.keystore
+*.jks
